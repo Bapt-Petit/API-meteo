@@ -1,0 +1,105 @@
+/* Contenu de test.css */
+@font-face {
+  font-family: 'Luciole';
+  src: url("./image/Luciole-Regular.ttf") format("ttf");
+}
+
+* {
+  margin: 0%;
+  font-family: 'Luciole', sans-serif;
+}
+
+body {
+  background-color: #b6c5d4;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+}
+
+.h1_text {
+  margin-top: 5%;
+}
+
+.autocomplete-suggestions {
+  border: 1px solid #00B4CC;
+  background: #EAEAE0;
+  overflow: auto;
+  position: absolute;
+  z-index: 10001;
+   margin-top: 35px;
+border-radius: 4px;
+
+}
+
+.autocomplete-suggestion {
+  padding: 20px;
+  cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+ 
+}
+
+.autocomplete-suggestion:hover {
+  background-color: #B0C6CE;
+}
+
+main {
+  display: flex;
+}
+
+#map {
+  display: flex;
+  width: 60%;
+  height: 400px;
+  margin-left: 10%;
+  border: solid #00B4CC;
+  border-radius: 4px;
+}
+#result{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 400px;
+  width: 220px;
+  margin-left: 2%;
+  border: solid #00B4CC;
+  border-radius: 4px;
+  background-color: #EAEAE0;
+}
+
+.search {
+  /* width: 100%; */
+  display: flex;
+  margin-bottom: 1%;
+  margin-left: 10%;
+}
+
+.searchTerm {
+  width: 57%;
+  border: 3px solid #00B4CC;
+  border-right: none;
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9DBFAF;
+}
+
+.searchTerm:focus{
+  color: #00B4CC;
+}
+
+.searchButton {
+  /* width: 40px; */
+  height: 36px;
+  border: 1px solid #00B4CC;
+  background: #00B4CC;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  /* font-size: 20px; */
+}

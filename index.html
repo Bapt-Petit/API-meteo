@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Carte Météo Interactive avec Clustering et Auto-Complétion</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.Default.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
+</head>
+
+<body>
+    <header>
+        <img src="./image/soleil.png" alt="">
+        <div class="h1_text">
+            <h1>Bienvenue sur la météo de France</h1>
+            <p>Ici vous pouvez connaître la météo de tous la France en une recherche</p>
+        </div>
+
+    </header>
+        <div class="search">
+            <input class="searchTerm" type="text" id="cityInput" placeholder="Entrez le nom d'une ville" oninput="showSuggestions(this.value)">
+            <div id="suggestionsBox" class="autocomplete-suggestions"></div>
+            <button class="searchButton" onclick="getWeatherByName()">Afficher la météo</button>
+        </div>
+    <main>
+        <div id="map"></div>
+        <div id="result"></div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
